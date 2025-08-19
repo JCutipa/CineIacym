@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Iniciando proceso de reserva...');
         
         // Primero: Mostrar vista previa
-        const previewResponse = await fetch('/reservas/preview', {
+        const previewResponse = await fetch('/api/reservas/preview', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -223,4 +223,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
 });
+
 
