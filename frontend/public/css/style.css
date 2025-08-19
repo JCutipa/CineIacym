@@ -1,0 +1,127 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.pelicula-card {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.pelicula-card:hover {
+  transform: scale(1.05);
+}
+
+.asiento {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.asiento-libre {
+  background-color: #28a745;
+  color: white;
+}
+
+.asiento-ocupado {
+  background-color: #dc3545;
+  color: white;
+}
+
+.asiento-seleccionado {
+  background-color: #ffc107;
+  color: black;
+}
+
+.screen {
+  background: linear-gradient(to right, #f8f9fa, #6c757d, #f8f9fa);
+  margin-bottom: 20px;
+}
+
+
+
+/* Estilos para el modal de vista previa */
+#previewModal .modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#previewModal .modal-header {
+    background-color: #343a40;
+    color: white;
+}
+
+#previewModal .modal-body {
+    padding: 2rem;
+}
+
+#previewModal img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background: white;
+}
+
+/* Estilos para asientos */
+.asiento {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  cursor: not-allowed;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Estilos para la pantalla */
+.screen {
+  background: linear-gradient(to right, #f8f9fa, #6c757d, #f8f9fa);
+  height: 30px;
+  margin: 20px auto 40px;
+  width: 80%;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+/* Estilos para el modal de vista previa */
+#previewModal .modal-content {
+  border-radius: 10px;
+}
+
+#previewModal .modal-header {
+  background-color: #343a40;
+  color: white;
+}
+
+#previewModal .modal-body {
+  padding: 2rem;
+}
+
+#previewModal img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  background: white;
+}
