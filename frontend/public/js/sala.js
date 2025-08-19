@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   try {
     // 1. Obtener asientos ocupados del servidor
-    const response = await fetch('http://localhost:3000/api/asientos');
+    const response = await fetch('/api/asientos');
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(`Error ${response.status}: ${errorText}`);
@@ -221,4 +221,5 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
     `;
   }
+
 });
