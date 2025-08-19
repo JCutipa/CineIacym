@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, '../frontend/views'));
 app.set('view engine', 'ejs');
 
 // Conexión a MongoDB
-mongoose.connect(MONGODB_URI, { 
+mongoose.connect(process.env.MONGODB_URI, { 
   useNewUrlParser: true, 
   useUnifiedTopology: true 
 })
