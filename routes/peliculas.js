@@ -22,6 +22,20 @@ router.get('/estadisticas', async (req, res) => {
   }
 });
 
+// Añade esta ruta temporal para debug en routes/peliculas.js
+router.get('/debug', async (req, res) => {
+  try {
+    const peliculas = await Pelicula.find();
+    console.log('Películas en DB:', peliculas); // Ver en logs de Render
+    res.json({
+      count: peliculas.length,
+      peliculas: peliculas
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Crear película (para inicializar datos)
 router.post('/', async (req, res) => {
   const pelicula = new Pelicula({
