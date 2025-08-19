@@ -7,7 +7,7 @@ const cors = require('cors');
 
 
 // En tu conexión a MongoDB (app.js), usa:
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cine', {
+mongoose.connect(process.env.MONGODB_URI , {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 5000,  // 5 segundos de timeout
