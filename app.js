@@ -47,6 +47,16 @@ app.use('/api/asientos', asientosRouter);
 app.get('/', (req, res) => res.render('index'));
 app.get('/sala/:peliculaId', (req, res) => res.render('sala', { peliculaId: req.params.peliculaId }));
 
+app.get('/debug', (req, res) => {
+  res.json({
+    staticPath: path.join(__dirname, 'public'),
+    files: {
+      css: fs.existsSync(path.join(__dirname, 'public/css/style.css')),
+      js: fs.existsSync(path.join(__dirname, 'public/js/script.js'))
+    }
+  });
+});
+
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
