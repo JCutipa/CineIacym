@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
 const cors = require('cors');
-
+const PORT = process.env.PORT || 3000; // ¡Faltaba esta línea!
 
 // En tu conexión a MongoDB (app.js), usa:
 mongoose.connect(process.env.MONGODB_URI , {
