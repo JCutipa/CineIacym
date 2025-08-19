@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Iniciando proceso de reserva...');
         
         // Primero: Mostrar vista previa
-        const previewResponse = await fetch('http://localhost:3000/api/reservas/preview', {
+        const previewResponse = await fetch('/reservas/preview', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   modal.hide();
   
   try {
-    const response = await fetch('http://localhost:3000/api/reservas', {
+    const response = await fetch('/api/reservas', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -223,3 +223,4 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
 });
+
