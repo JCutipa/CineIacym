@@ -18,7 +18,9 @@ mongoose.connect(process.env.MONGODB_URI , {
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../frontend/public')));
+app.use(express.static(path.join(__dirname,'frontend','public')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));  // Ruta específica para CSS
+app.use('/js', express.static(path.join(__dirname, 'public/js')));  // Ruta específica para JS
 
 // Indicar a Express dónde están las vistas
 app.set('views', path.join(__dirname, 'frontend', 'views'));
