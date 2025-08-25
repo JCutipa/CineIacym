@@ -128,7 +128,7 @@ const asientosOcupados = await Reserva.aggregate([
     // Encabezado
     doc.fillColor('#333333')
       .fontSize(20)
-      .text('CineStar', 50, 50)
+      .text('CINE JTC EXTTREME', 50, 50)
       .fontSize(10)
       .text('Gracias por su reserva', 50, 80)
       .moveDown();
